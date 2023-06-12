@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="diseño/estilo.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>Formulario de Registro</title>
+</head>
+<body style="background-color: rgba(242, 185, 255, 0.423);">
+    <div class="container">
+        <form action="target.html" class="form" onsubmit="return validar()">
+            <p class="form-titulo">Complete los siguientes datos</p>
+            <div class="form-input">
+                <input type="text" id="email">
+                <label for="email">Correo electronico</label>
+                <div id="err_email"></div>
+            </div>
+            <div class="form-input">
+                <input type="password" id="pass">
+                <label for="pass">Ingrese contraseña</label>
+                <div id="err_pass"></div>
+            </div>
+            <div class="form-input">
+                <input type="password" id="passconfirm">
+                <label for="passconfirm">Confirme su contraseña</label>
+                <div id="err_passconfirm"></div>
+            </div>
+            <div class="form-input">
+                <input type="text" id="direccion">
+                <label for="direccion">Ingrese su dirección</label>
+                <div id="err_direccion"></div>
+            </div>
+            <div class="form-input">
+                <select class="form-select" name="comunas" id="comuna">
+                    <option selected>Seleccione una comuna</option>
+                    <option>Panguipulli</option>
+                    <option>Futrono</option>
+                    <option>Río Bueno</option>
+                    <option>Lago Ranco</option>
+                    <option>La Unión</option>
+                    <option>Corral</option>
+                    <option>Paillaco</option>
+                    <option>Valdivia</option>
+                    <option>Máfil</option>
+                    <option>Lanco</option>
+                    <option>Mariquina</option>
+                    <option>Los Lagos</option>
+                </select>
+                <div id="err_comuna"></div>
+            </div>
+            <div class="form-input">
+                <input type="text" id="phone">
+                <label for="phone">Ingrese su numero de telefono</label>
+                <div id="err_phone"></div>
+            </div>
+            <div class="form-input">
+                <input type="text" id="web">
+                <label for="web">Ingrese una pagina web personal</label>
+                <div id="err_web"></div>
+            </div>
+            <div class="form-input">
+                <input type="text" id="hobbiesInput">
+                <label for="hobbies">Ingrese sus aficiones o pasatiempos</label>
+                <ul id="hobbiesList"></ul>
+                <div id="err_hobbies" class="text-danger"></div>
+            </div>
+            <div class="form-termsAndConditions">
+                <input type="checkbox" id="termsAndConditions">
+                <label for="termsAndConditions">He leido y acepto los </label>
+                <a href="#" style="color:rgb(65, 65, 65)">Términos y Condiciones</a>
+                <div id="err_termsAndConditions"></div>
+            </div>
+            <div class="form-boton">
+                <input type="submit" value="Enviar">
+            </div>
+        </form>
+    </div>
+    <script src="restricciones/form.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>

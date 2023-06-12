@@ -1,0 +1,147 @@
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --cfondo: rgba(242, 185, 255, 0.423);
+    --ccfondoForm1: rgb(186, 0, 210);
+    --ccfondoForm2: rgba(179, 0, 255, 0.549);
+    --cnegro: black;
+}
+
+body{
+    margin: 0;
+    background: var(--cfondo);
+    font-family: sans-serif;
+}
+
+.container{
+    max-width: 90%;
+    margin: auto;
+}
+
+
+[type="checkbox"]{
+    display: none;
+}
+
+[type="checkbox"]:checked+label::before{
+    background: var(--cnegro);
+    transition: 0.5s;
+    transform: rotate(180deg);
+}
+
+[type="checkbox"]:checked+label{
+    color: var(--cnegro);
+}
+
+/*FORMULARIO*/
+.form{
+    border-top: 2px solid black;
+    max-width: 400px;
+    padding: 30px 50px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: linear-gradient(
+        0deg,
+        var(--ccfondoForm1)0%,
+        var(--ccfondoForm2) 50%
+    );
+}
+
+.form-titulo{
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+}
+
+.form-input{
+    margin-bottom: 30px;
+}
+
+.form-input label{
+    display: block;
+    margin-top: 10px;
+    font-size: 15px;
+    color: rgb(65, 65, 65);
+}
+
+.form-input input{
+    width: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 1px solid rgb(65, 65, 65);
+}
+
+.form-input input:focus+label{
+    font-weight: bold;
+    color:var(--cnegro);
+}
+
+.form-select{
+    width: 100%;
+    border: none;
+    outline: none;
+    background: none;
+
+}
+
+.form-termsAndConditions{
+    margin-left: 15px;
+    position: relative;
+    color:rgb(65, 65, 65);
+    font-size: 15px;
+}
+
+.form-termsAndConditions label::before{
+    content:"";
+    width: 8px;
+    height: 8px;
+    border: 1px solid var(--cnegro);
+    position: absolute;
+    left: -14px;
+}
+
+.form-boton input{
+    background: var(--cnegro);
+    color: white;
+    padding: 10px 50px;
+    font-size: 25px;
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.form-boton input:hover{
+    background: rgb(70, 0, 70);
+    transition: 0.3s;
+}
+
+.mensajeError{
+    color: rgb(184, 31, 31);
+    margin-top: 0px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.mensajeCorrecto{
+    text-align: center;
+    font-weight: bold;
+}
+
+.form-input button {
+    margin-top: 2px;
+    border: none;
+    background: purple;
+}
+
+.form-input button:hover{
+    background: rgb(70, 0, 70);
+    transition: 0.3s;
+}
